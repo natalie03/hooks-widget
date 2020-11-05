@@ -4,6 +4,7 @@ import { Datetime, News } from './components';
 function App() {
   // TODO: show/hide widget button
   // Store with cookies?
+  // Performance improvements
   return (
     <div className="App">
       <div className="widget">
