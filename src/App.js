@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import { Datetime, News } from './components';
 
 function App() {
+  // TODO: show/hide widget button
+  // Store with cookies?
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="widget">
+        <Datetime />
+        <News />
+        <button type="button">Show/hide widget</button>
+      </div>
+      <p>This is our dashboard - what do we want to show here?</p>
     </div>
   );
 }
