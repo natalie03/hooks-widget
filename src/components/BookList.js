@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {v1 as uuidv1 } from 'uuid'
+import NewBookForm from './NewBookForm';
 
 const BookList = () => {
     const [books, setBooks] = useState([
@@ -7,8 +8,8 @@ const BookList = () => {
         { title: 'Breath', id: 2},
         { title: 'The Splendid and the Vile', id: 3}
     ]);
-    const addBook = () => {
-        setBooks([...books, {title: 'new book', id: uuidv1()}])
+    const addBook = (title) => {
+        setBooks([...books, {title, id: uuidv1()}])
     }
     return (
         <div className="book-list">
@@ -19,7 +20,7 @@ const BookList = () => {
                     )
                 })}
             </ul>
-            <button onClick={addBook}>Add a book</button>
+            <NewBookForm addBook={addBook}/>
         </div>
      );
 }
