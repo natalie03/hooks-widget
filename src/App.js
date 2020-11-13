@@ -1,5 +1,5 @@
-import './App.css';
 import { Datetime, News } from './components';
+import BookList from './components/BookList';
 
 function App() {
   // TODO: show/hide widget button
@@ -13,6 +13,7 @@ function App() {
         <button type="button">Show/hide widget</button>
       </div>
       <p>This is our dashboard - what do we want to show here?</p>
+      <BookList />
     </div>
   );
 }
